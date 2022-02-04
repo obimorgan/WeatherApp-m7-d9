@@ -9,31 +9,14 @@ export const SearchBar = () => {
     const [searchInput, setSearchInput] = useState("")
     const dispatch = useDispatch()
 
-    const handlesubmit = async (e) => {
+    const handlesubmit = (e) => {
         e.preventDefault()
-        // try {
-        //     let response = await fetch(
-        //         `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&units=metric&appid=75efdabcaec02d5334d12a7b5aecd8dd`
-        //     );
-        //     if (response.ok) {
-        //         console.log("Im fetching");
-        //         let data = await response.json();
-        //         console.log(data)
-        //         // dispatch({
-        //         //     type: SET_WEATHER,
-        //         //     payload: data,
-        //         // });
-        //     } else {
-        //         console.log("error");
-        //     }
-        // } catch (error) {
-        //     console.log(error);
-        // }
+        dispatch(setWeatherToCityAction((searchInput)))
     }
 
     return (
         <>
-            <Form className="search_bar" onSubmit={handlesubmit} >
+            <Form className="search_bar" onSubmit={handlesubmit}>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label className="search_header">
                         Enter your city
@@ -42,11 +25,6 @@ export const SearchBar = () => {
                         type="text"
                         value={searchInput}
                         onChange={e => { setSearchInput(e.target.value); console.log("Im typing:", e.target.value) }}
-                        onKeyDown={e => {
-                            if (e.key === 'Enter') {
-                                dispatch(setWeatherToCityAction((searchInput)))
-                            }
-                        }}
                     />
                     <Form.Text className="text-muted">
                         The weather man never lies.

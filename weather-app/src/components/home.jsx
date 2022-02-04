@@ -1,15 +1,33 @@
 
 import { SearchBar } from './SeachBar'
 import { WeatherDetail } from './WeatherDetail'
+import { useSelector } from "react-redux"
+// import { useState } from 'react'
+
 export const Home = () => {
+    const data = useSelector(state => state.city.weather)
+    console.log(data.weather[0].main)
     return (
-        <div className="home" >
-            <div className="home_sunny d-flex justify-content-center">
+        <main className="home">
+            <div className=
+                {
+                    (typeof data.weather.main !== undefined) ?
+                        ((data.weather[0].main === 'Clouds') ? "home_cloudy d-flex justify-content-center" : " d-flex home_sunny justify-content-center") &&
+                        ((data.weather[0].main === 'Rain') ? "home_rainy d-flex justify-content-center" : " d-flex home_rainy justify-content-center")
+                        : "home_sunny d-flex justify-content-center"
+                }
+            // {
+            // const img = if (typeof data.weather.main!== "undefined"){
+
+            // }
+            // }
+            // "home_sunny d-flex justify-content-center"
+            >
                 <div className="flex-column components_container">
                     <SearchBar />
                     <WeatherDetail />
                 </div>
             </div>
-        </div>
+        </main>
     )
 }
