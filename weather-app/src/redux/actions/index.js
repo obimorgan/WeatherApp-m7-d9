@@ -14,6 +14,7 @@ export const setWeatherToCityAction = (searchInput) => {
       if (response.ok) {
         console.log("Im fetching");
         let data = await response.json();
+        console.log("fetch");
         dispatch({
           type: SET_WEATHER,
           payload: data,
