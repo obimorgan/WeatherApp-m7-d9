@@ -1,0 +1,11 @@
+/** @format */
+
+.sunny_img {
+  object-fit: cover;
+  position: relative;
+}
+
+.search_bar {
+  position: absolute;
+  top: auto;
+}
