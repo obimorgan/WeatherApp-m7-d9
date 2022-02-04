@@ -5,19 +5,19 @@ import thunk from "redux-thunk";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { encryptTransform } from "redux-persist-transform-encrypt";
-import setCityReducer from "./reducer/index";
+import setWeatherReducer from "./reducer/index";
 
 const composeThatAlwaysWorks =
   window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__ || compose;
 
 export const initialState = {
   city: {
-    search: [],
+    weather: {},
   },
 };
 
 const rootReducer = combineReducers({
-  city: setCityReducer,
+  city: setWeatherReducer,
 });
 
 const persistConfig = {

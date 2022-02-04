@@ -1,18 +1,18 @@
 /** @format */
 
 import { initialState } from "..";
-import { SET_CITY } from "../actions";
+import { SET_WEATHER } from "../actions";
 
-const setCityReducer = (state = initialState.city, action) => {
+const setWeatherReducer = (state = initialState.city, action) => {
   switch (action.type) {
-    case SET_CITY:
+    case SET_WEATHER:
       return {
         ...state,
-        search: action.payload,
+        weather: action.payload,
       };
     default:
       return state;
   }
 };
 
-export default setCityReducer;
+export default setWeatherReducer;
