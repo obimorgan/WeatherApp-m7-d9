@@ -2,7 +2,7 @@
 export const SET_WEATHER = "SET_WEATHER";
 
 export const setWeatherToCityAction = (searchInput) => {
-  // const apiKey = process.env.API_KEY;
+  // const apiKey = process.env.REACT_API_KEY;
 
   return async (dispatch) => {
     // console.log("here's my state currently", getState());

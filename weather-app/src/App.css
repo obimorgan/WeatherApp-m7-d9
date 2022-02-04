@@ -1,11 +1,41 @@
 /** @format */
-
 .sunny_img {
   object-fit: cover;
   position: relative;
 }
 
+.search_header {
+  font-size: 50px;
+  font-weight: 700;
+}
+
 .search_bar {
+  margin-top: 300px;
+  width: 50vw;
+}
+
+.components_container {
   position: absolute;
   top: auto;
+}
+.city_text {
+  color: white;
+  text-shadow: 2px 2px rgb(31, 22, 22);
+  text-align: end;
+}
+.date_text {
+  color: rgb(242, 124, 124);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  text-align: start;
+}
+.temp_text {
+  color: white;
+  text-shadow: 2px 2px rgb(31, 22, 22);
+  text-align: end;
+}
+.weather_text {
+  color: rgb(242, 124, 124);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  text-align: start;
+  font-size: 80px;
 }

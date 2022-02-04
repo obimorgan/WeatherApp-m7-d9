@@ -11,11 +11,11 @@ export const SearchBar = () => {
 
     return (
         <>
-            <Form
-                className="search_bar"
-            >
+            <Form className="search_bar" >
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Label className="d-flex justify-content-center">Enter a city</Form.Label>
+                    <Form.Label className="search_header">
+                        Enter your city
+                    </Form.Label>
                     <Form.Control
                         type="text"
                         value={searchInput}
