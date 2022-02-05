@@ -11,10 +11,10 @@ export const WeatherDetail = () => {
                 ?
                 (<div className="weather_container my-3">
                     <h1 className="weather_text d-flex justify-content-center">{data?.weather[0].main}</h1>
-                    <div>{data?.weather[0].icon}</div>
-                    <div >
-                        <h2 className="city_text">{data?.name}</h2>
-                    </div>
+                    {/* <div>{data?.weather[0].icon}</div> */}
+
+                    <h2 className="city_text d-flex jutify-content-start ">{data?.name}</h2>
+
                     <div className="d-flex justify-content-between align-items-center">
                         <div>
                             <h4 className="date_text">{CurrentDate(new Date())}</h4>

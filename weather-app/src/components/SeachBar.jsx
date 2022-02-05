@@ -19,7 +19,7 @@ export const SearchBar = () => {
             <Form className="search_bar" onSubmit={handlesubmit}>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label className="search_header">
-                        Enter your city
+                        Weather forcecast
                     </Form.Label>
                     <Form.Control
                         type="text"

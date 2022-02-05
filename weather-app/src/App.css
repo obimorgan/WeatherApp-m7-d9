@@ -1,4 +1,10 @@
 /** @format */
+.home {
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.952);
+  height: 100vh;
+  width: 100vw;
+}
 .home_sunny {
   background-image: url("https://images.unsplash.com/photo-1610825791386-a1a19146b9f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
   height: 100vh;
@@ -14,27 +20,50 @@
   height: 100vh;
   width: 100vw;
 }
-.weather_container {
-  border: 1px solid rgba(240, 153, 153, 0.701);
-  padding: 30px;
-  background-color: rgba(205, 209, 255, 0.379);
+.home_drizzle {
+  background-image: url("https://images.unsplash.com/photo-1576234699886-7eb7f11aecb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  height: 100vh;
+  width: 100vw;
+}
+.home_snow {
+  background-image: url("https://images.unsplash.com/photo-1517166357932-d20495eeffd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80");
+  height: 100vh;
+  width: 100vw;
+}
+
+.components_container {
+  border: 0.5px solid rgb(255, 255, 255);
+  height: calc(100vh - 50px);
+  padding: 50px;
+  margin-top: 25px;
+  background-color: rgba(146, 138, 255, 0.432);
+  border-radius: 40px;
   border-radius: 25px;
   box-shadow: -2px 47px 45px 74px rgba(0, 0, 0, 0.1),
     0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.weather_container {
+  border: 1px solid rgba(251, 249, 249, 0.701);
+  padding: 30px;
+  background-color: rgba(227, 230, 255, 0.379);
+  border-radius: 25px;
+  box-shadow: -2px 47px 45px 74px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 .sunny_img {
   object-fit: cover;
   position: relative;
 }
-
 .search_header {
   font-size: 50px;
   font-weight: 700;
+  color: rgb(242, 124, 124);
 }
-
 .search_bar {
-  margin-top: 150px;
+  margin-top: 10px;
   width: 50vw;
+  border-radius: 33.25rem;
 }
 
 .components_container {
@@ -43,18 +72,19 @@
 }
 .city_text {
   color: white;
-  text-shadow: 2px 2px rgb(31, 22, 22);
-  text-align: end;
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.507);
+  font-size: 60px;
 }
 .date_text {
   color: rgb(242, 124, 124);
-  text-shadow: 2px 2px rgb(0, 0, 0);
+  text-shadow: 2px 2px rgb(255, 255, 255);
   text-align: start;
 }
 .temp_text {
   color: white;
-  text-shadow: 2px 2px rgb(31, 22, 22);
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.514);
   text-align: end;
+  font-size: 60px;
 }
 .weather_text {
   color: rgb(242, 124, 124);
