@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Form } from "react-bootstrap"
 import { useDispatch } from "react-redux"
 import { setWeatherToCityAction } from "../redux/actions"
+import { FormEvent } from "react"
 
 
 export const SearchBar = () => {
@@ -9,7 +10,7 @@ export const SearchBar = () => {
     const [searchInput, setSearchInput] = useState("")
     const dispatch = useDispatch()
 
-    const handlesubmit = (e) => {
+    const handlesubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         dispatch(setWeatherToCityAction((searchInput)))
     }

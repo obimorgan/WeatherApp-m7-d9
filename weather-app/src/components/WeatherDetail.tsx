@@ -1,9 +1,9 @@
 import { Container } from "react-bootstrap"
 import { CurrentDate } from "./CurrentDate"
-import { useSelector } from "react-redux"
+import { useSelector, RootStateOrAny } from "react-redux"
 
 export const WeatherDetail = () => {
-    const data = useSelector(state => state.city.weather)
+    const data = useSelector((state: RootStateOrAny) => state.city.weather)
     console.log(data)
     return (
         <Container>

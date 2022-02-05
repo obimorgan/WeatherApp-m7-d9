@@ -1,3 +1,5 @@
+import { AnyAction } from "redux";
+
 /** @format */
 export const SET_WEATHER = "SET_WEATHER";
 

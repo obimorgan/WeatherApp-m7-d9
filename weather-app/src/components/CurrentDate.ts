@@ -1,7 +1,6 @@
 /** @format */
 
-// export const CurrentDate = () => {
-export const CurrentDate = (d) => {
+export const CurrentDate = (d: Date) => {
   let months = [
     "January",
     "February",
@@ -32,4 +31,4 @@ export const CurrentDate = (d) => {
   let year = d.getFullYear();
   return `${day} ${date} ${month} ${year}`;
 };
-// };
+
