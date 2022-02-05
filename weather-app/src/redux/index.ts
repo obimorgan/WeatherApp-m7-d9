@@ -5,10 +5,10 @@ import thunk from "redux-thunk";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { encryptTransform } from "redux-persist-transform-encrypt";
-import setWeatherReducer from "./reducer/index";
+import setWeatherReducer from "./reducer/index"
 
 const composeThatAlwaysWorks =
-  window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__ || compose;
+   (window as any).__REDUX_DEVTOOLS_EXTENSION__COMPOSE__ || compose;
 
 export const initialState = {
   city: {
@@ -25,7 +25,7 @@ const persistConfig = {
   storage,
   transforms: [
     encryptTransform({
-      secretKey: process.env.REACT_APP_SECRET_KEY,
+       secretKey: "process.env.REACT_APP_SECRET_KEY",
       onError: (error) => {
         console.log("encryption error", error);
       },

@@ -1,11 +1,11 @@
 /** @format */
 export const SET_WEATHER = "SET_WEATHER";
 
-export const setWeatherToCityAction = (searchInput) => {
+export const setWeatherToCityAction = (searchInput: string) => {
   // const apiKey = process.env.REACT_API_KEY;
   // url = `api.openweathermap.org/data/2.5`
 
-  return async (dispatch, getState) => {
+  return async (dispatch: (arg0: { type: string; payload: any; }) => void, getState: () => any) => {
     console.log("here's my state currently", getState());
     try {
       let response = await fetch(
