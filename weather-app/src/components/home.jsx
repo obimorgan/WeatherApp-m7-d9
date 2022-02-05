@@ -12,7 +12,7 @@ export const Home = () => {
             <div className=
                 {
                     // (typeof data.weather.main !== undefined) ?
-                    data.weather[0].main === 'Clouds' ? "home_clouds d-flex justify-content-center" :
+                    data.weather[0].main === 'Clouds' ? "home_cloudy d-flex justify-content-center" :
                         data.weather[0].main === 'Rain' ? "home_rainy d-flex justify-content-center" :
                             data.weather[0].main === 'Drizzle' ? "home_drizzle d-flex justify-content-center" :
                                 data.weather[0].main === 'Snow' ? "home_snow d-flex justify-content-center"
